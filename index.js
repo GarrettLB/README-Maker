@@ -2,12 +2,6 @@ const fs = require('fs');
 const inq = require('inquirer')
 
 const prompts = [
-    
-    {
-        type: "input",
-        message: "What is your full name?",
-        name: "name",
-    },
     {
         type: "input",
         message: "What is the title of your project?",
@@ -60,17 +54,17 @@ inq
     .prompt(prompts)
 
     .then(data => {
-        const {name, title, desc, licenses, install, usage, contrib, test, github, email} = data
+        const {title, desc, licenses, install, usage, contrib, test, github, email} = data
         console.log(data)
-        console.log(name, title,desc, licenses, install, usage, contrib, test, github, email)
+        console.log(title, desc, licenses, install, usage, contrib, test, github, email)
 
         if (licenses === "MIT") {
-            var license = `MIT License. Copyright (c) 2021 ${name} [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+            var license = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
             
         } else if (licenses === "GNU GPLv3") {
-            var license = `GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007. Copyright (C) 2007 Free Software Foundation, Inc. [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+            var license = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
         } else if (licenses === "Mozilla Public License 2.0") {
-            var license = `Mozilla Public License Version 2.0 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
+            var license = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
         }
 
         const README = 
