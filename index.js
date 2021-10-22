@@ -42,18 +42,29 @@ inq
         console.log(data)
         console.log(title,desc, install, usage, contrib, test)
 
+        // sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+
         const README = 
 `# ${title}
 
-## ${desc}
+## Table of Contents
+* [Descritpon](##Description)
+* [Installation](##Installation)
 
-## ${install}
+## Description
+${desc}
 
-## ${usage}
+## Installation
+${install}
 
-## ${contrib}
+## Usage
+${usage}
 
-## ${test}`
+## Contributiing
+${contrib}
+
+## Tests
+${test}`
 
         fs.writeFile('testREADME.md', README, (err) =>
         err ? console.error(err) : console.log('No errors'))
