@@ -36,3 +36,27 @@ const prompts = [
 
 inq
     .prompt(prompts)
+
+    .then(data => {
+        const {title, desc, install, usage, contrib, test} = data
+        console.log(data)
+        console.log(title,desc, install, usage, contrib, test)
+
+        const README = 
+        `
+        ${title}
+
+        ${desc}
+
+        ${install}
+
+        ${usage}
+
+        ${contrib}
+
+        ${test}
+        `
+
+        fs.writeFile('testREADME.md', README, (err) =>
+        err ? console.error(err) : console.log('No errors'))
+    })
