@@ -2,6 +2,12 @@ const fs = require('fs');
 const inq = require('inquirer')
 
 const prompts = [
+    
+    {
+        type: "input",
+        message: "What is your full name?",
+        name: "name",
+    },
     {
         type: "input",
         message: "What is the title of your project?",
@@ -15,7 +21,7 @@ const prompts = [
     {
         type: "list",
         message: 'Which license would you like to use on your project?',
-        name: 'license',
+        name: 'licenses',
         choices: ['MIT', 'GNU GPLv3', 'Mozilla Public License 2.0'],
     },
     {
@@ -54,9 +60,18 @@ inq
     .prompt(prompts)
 
     .then(data => {
-        const {title, desc, license, install, usage, contrib, test, github, email} = data
+        const {name, title, desc, licenses, install, usage, contrib, test, github, email} = data
         console.log(data)
-        console.log(title,desc, license, install, usage, contrib, test, github, email)
+        console.log(name, title,desc, licenses, install, usage, contrib, test, github, email)
+
+        if (licenses === "MIT") {
+            var license = `MIT License. Copyright (c) 2021 ${name}`
+            
+        } else if (licenses === "GNU GPLv3") {
+            var license = `GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007. Copyright (C) 2007 Free Software Foundation, Inc.`
+        } else if (licenses === "Mozilla Public License 2.0") {
+            var license = `Mozilla Public License Version 2.0`
+        }
 
         const README = 
 `# ${title}
@@ -73,6 +88,7 @@ ${desc}
 * [Questions](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#questions)
 
 ## License
+${license}
 
 ## Installation
 ${install}

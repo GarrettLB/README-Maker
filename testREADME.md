@@ -1,7 +1,7 @@
-# ljfsaljsf
+# Big Booty Judy
 
 ## Description
-lah;lifhai ahefiojah haufha
+We aim to find out how the hell she fit in them jeans
 
 ## Table of Contents
 * [License](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#license)
@@ -12,20 +12,22 @@ lah;lifhai ahefiojah haufha
 * [Questions](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#questions)
 
 ## License
+MIT License. Copyright (c) 2021 Garrett Bryan
+
 
 ## Installation
-alj fhapuhfiouhaiuehfa aiohfa
+Simply download the file and wait while we figure it out
 
 ## Usage
-aj;odihfh hiaouhiudhfa hpoahf
+General usage. You tryna figure it out like everybody else is
 
 ## Contributing
-\ahduhfihahd
+The whole world basically
 
 ## Tests
-aijdifjahfh
+test it
 
 ## Questions
 ### Got questions about my project?
-* Email me at ijaijfa
-* [Or Visit my GitHub](https://github.com/jaisfh)
+* Email me at garrettleebryan@gmail.com
+* [Or Visit my GitHub](https://github.com/GarrettLB)
