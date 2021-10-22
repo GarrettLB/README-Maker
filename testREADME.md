@@ -1,7 +1,7 @@
 # Big Booty Judy
 
 ## Description
-We aim to find out how the hell she fit in them jeans
+We jus tryna figure out how the hell she fit all that inside them jean
 
 ## Table of Contents
 * [License](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#license)
@@ -12,20 +12,19 @@ We aim to find out how the hell she fit in them jeans
 * [Questions](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#questions)
 
 ## License
-MIT License. Copyright (c) 2021 Garrett Bryan
-
+GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007. Copyright (C) 2007 Free Software Foundation, Inc. [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ## Installation
-Simply download the file and wait while we figure it out
+click install and pray for the best
 
 ## Usage
-General usage. You tryna figure it out like everybody else is
+Use it or lose it
 
 ## Contributing
-The whole world basically
+Errbody and they mama
 
 ## Tests
-test it
+Dont test me
 
 ## Questions
 ### Got questions about my project?

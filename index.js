@@ -65,12 +65,12 @@ inq
         console.log(name, title,desc, licenses, install, usage, contrib, test, github, email)
 
         if (licenses === "MIT") {
-            var license = `MIT License. Copyright (c) 2021 ${name}`
+            var license = `MIT License. Copyright (c) 2021 ${name} [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
             
         } else if (licenses === "GNU GPLv3") {
-            var license = `GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007. Copyright (C) 2007 Free Software Foundation, Inc.`
+            var license = `GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007. Copyright (C) 2007 Free Software Foundation, Inc. [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
         } else if (licenses === "Mozilla Public License 2.0") {
-            var license = `Mozilla Public License Version 2.0`
+            var license = `Mozilla Public License Version 2.0 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
         }
 
         const README = 
