@@ -12,26 +12,26 @@ const prompts = [
         message: "What is a brief description of your project?",
         name: "desc",
     },
-    {
-        type: "input",
-        message: "What are the installation instructions of your application?",
-        name: "install",
-    },
-    {
-        type: "input",
-        message: "What is the usage information for your project?",
-        name: "usage",
-    },
-    {
-        type: "input",
-        message: "What are the contribution guidelines for your project?",
-        name: "contrib",
-    },
-    {
-        type: "input",
-        message: "What are the test instructions for your project?",
-        name: "test",
-    }
+    // {
+    //     type: "input",
+    //     message: "What are the installation instructions of your application?",
+    //     name: "install",
+    // },
+    // {
+    //     type: "input",
+    //     message: "What is the usage information for your project?",
+    //     name: "usage",
+    // },
+    // {
+    //     type: "input",
+    //     message: "What are the contribution guidelines for your project?",
+    //     name: "contrib",
+    // },
+    // {
+    //     type: "input",
+    //     message: "What are the test instructions for your project?",
+    //     name: "test",
+    // }
 ]
 
 inq
@@ -43,19 +43,17 @@ inq
         console.log(title,desc, install, usage, contrib, test)
 
         const README = 
-        `
-        ${title}
+`# ${title}
 
-        ${desc}
+## ${desc}
 
-        ${install}
+## ${install}
 
-        ${usage}
+## ${usage}
 
-        ${contrib}
+## ${contrib}
 
-        ${test}
-        `
+## ${test}`
 
         fs.writeFile('testREADME.md', README, (err) =>
         err ? console.error(err) : console.log('No errors'))
