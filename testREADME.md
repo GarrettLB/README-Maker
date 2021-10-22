@@ -11,13 +11,13 @@ j;aihfah hauhfasuhf luahfuahifha  ;lkhafkh uhalkfh
 * [Tests](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#tests)
 * [Questions](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#questions)
 
+## License
+
 ## Installation
 lajsfije aihjfha ; iahfh; fea  aihfi
 
 ## Usage
 jfaoihe  ahufh af
-
-## License
 
 ## Contributing
 oaijf ehah
