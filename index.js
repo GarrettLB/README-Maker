@@ -12,50 +12,59 @@ const prompts = [
         message: "What is a brief description of your project?",
         name: "desc",
     },
-    // {
-    //     type: "input",
-    //     message: "What are the installation instructions of your application?",
-    //     name: "install",
-    // },
-    // {
-    //     type: "input",
-    //     message: "What is the usage information for your project?",
-    //     name: "usage",
-    // },
-    // {
-    //     type: "input",
-    //     message: "What are the contribution guidelines for your project?",
-    //     name: "contrib",
-    // },
-    // {
-    //     type: "input",
-    //     message: "What are the test instructions for your project?",
-    //     name: "test",
-    // }
+    {
+        type: "input",
+        message: "What are the installation instructions of your application?",
+        name: "install",
+    },
+    {
+        type: "input",
+        message: "What is the usage information for your project?",
+        name: "usage",
+    },
+    {
+        type: "input",
+        message: "What are the contribution guidelines for your project?",
+        name: "contrib",
+    },
+    {
+        type: "input",
+        message: "What are the test instructions for your project?",
+        name: "test",
+    },
+    {
+        type: "input",
+        message: "What is your GitHub username?",
+        name: "github",
+    },
+    {
+        type: "input",
+        message: "What is your email address?",
+        name: "email",
+    }
 ]
 
 inq
     .prompt(prompts)
 
     .then(data => {
-        const {title, desc, install, usage, contrib, test} = data
+        const {title, desc, install, usage, contrib, test, github, email} = data
         console.log(data)
-        console.log(title,desc, install, usage, contrib, test)
-
-        // sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+        console.log(title,desc, install, usage, contrib, test, github, email)
 
         const README = 
 `# ${title}
 
-## Table of Contents
-* [Description](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#description)
-* [Installation](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#installation)
-* [Usage]()
-* [Contributing]()
-* [Tests]()
-
 ## Description
 ${desc}
+
+## Table of Contents
+* [Installation](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#installation)
+* [Usage](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#usage)
+* [License](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#license)
+* [Contributing](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#contributing)
+* [Tests](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#tests)
+* [Questions](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#questions)
 
 ## Installation
 ${install}
@@ -63,11 +72,18 @@ ${install}
 ## Usage
 ${usage}
 
+## License
+
 ## Contributing
 ${contrib}
 
 ## Tests
-${test}`
+${test}
+
+## Questions
+### Got questions about my project?
+* Email me at ${email}
+* [Or Visit my GitHub](https://github.com/${github})`
 
         fs.writeFile('testREADME.md', README, (err) =>
         err ? console.error(err) : console.log('No errors'))
