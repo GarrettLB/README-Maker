@@ -12,6 +12,7 @@ My program will walk you through all the key points to include in a README and a
 
 ## Installation and Usage
 Simply clone the repo to install. Then cd to the folder and open in your (integrated) terminal, type "node index", hit enter, and fill out the prompts.
+Walk-through video: https://drive.google.com/file/d/1fdiVkvtTHeDIz7rhx3sVetoYdiyhTMPr/view?usp=sharing
 
 ## Screenshot:
 <img src="./assets/images/Screenshot.png">
