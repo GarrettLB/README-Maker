@@ -1,0 +1,1 @@
+Simply type "node index" in your terminal to begin.
