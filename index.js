@@ -55,40 +55,45 @@ inq
 
     .then(data => {
         const {title, desc, licenses, install, usage, contrib, test, github, email} = data
-        console.log(data)
-        console.log(title, desc, licenses, install, usage, contrib, test, github, email)
+
+        if(!title || !desc || !licenses || !install || !usage || !contrib || !test || !github || !email) {
+            console.log("Please fill out all questions! To try again run the program again")
+            return
+        }
 
         if (licenses === "MIT") {
-            var license = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+            var badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
             
         } else if (licenses === "GNU GPLv3") {
-            var license = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+            var badge = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
         } else if (licenses === "Mozilla Public License 2.0") {
-            var license = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
+            var badge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
         }
 
         const README = 
 `# ${title}
 
+${badge}
+
 ## Description
 ${desc}
 
 ## Table of Contents
-* [License](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#license)
-* [Installation](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#installation)
-* [Usage](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#usage)
-* [Contributing](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#contributing)
-* [Tests](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#tests)
-* [Questions](https://github.com/GarrettLB/README-Generator/blob/main/testREADME.md#questions)
-
-## License
-${license}
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
 ## Installation
 ${install}
 
 ## Usage
 ${usage}
+
+## License
+Licensed under the ${licenses} license.
 
 ## Contributing
 ${contrib}
@@ -101,6 +106,6 @@ ${test}
 * Email me at ${email}
 * [Or Visit my GitHub](https://github.com/${github})`
 
-        fs.writeFile('testREADME.md', README, (err) =>
+        fs.writeFile('generatedREADME.md', README, (err) =>
         err ? console.error(err) : console.log('No errors'))
     })
